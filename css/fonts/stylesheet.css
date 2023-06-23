@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Bold.otf') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Book.otf') format('woff2');
+    font-weight: book;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Light.otf') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Regular.otf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('UniviaPro-Medium.otf') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,232 @@
+.history {
+  margin-top: 20px;
+  &Top {
+    background-color: $main;
+    padding: 100px 0 300px;
+    h2 {
+      color: $white;
+    }
+  }
+  &Main {
+    padding: 0 0 300px;
+    &__slider {
+        width: calc(100% + 24px);
+        margin: 0 -12px;
+    }
+    .slick {
+      &-list {
+        overflow: visible !important;
+        padding: 0 !important;
+      }
+    }
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+      button {
+        width: 68px;
+        height: 68px;
+        background-color: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 36px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          opacity: 1;
+          background-color: $main;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        img {
+          width: 60%;
+        }
+        &.prev {
+          img {
+            transform: rotate(90deg);
+          }
+        }
+        &.next {
+          img {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+  &Item {
+    margin: 0 12px;
+    position: relative;
+    &__title {
+      position: absolute;
+      bottom: calc(100% + 40px);
+      left: 0;
+      h2 {
+        color: $white;
+        span {
+          display: block;
+          margin-top: 4px;
+          font-weight: 400;
+        }
+      }
+    }
+    &__image {
+      padding-bottom: 68%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1380px
+@mixin history-xxxlg-xxxxlg {
+  .history {
+    &Top {
+        padding: 60px 0 200px;
+    }
+    &Main {
+        padding-bottom: 200px;
+    }
+  }
+}
+// 1250px
+@mixin history-xlg-xxlg-extra {
+  .history {
+  }
+}
+// 1180px
+@mixin history-xlg-xxlg {
+  .history {
+    &Top {
+        padding: 40px 0 160px;
+    }
+    &Main {
+        padding-bottom: 130px;
+        &__slider {
+            width: calc(100% + 12px);
+            margin: 0 -6px;
+        }
+        &__footer {
+            padding-top: 25px;
+            button {
+                width: 50px;
+                height: 50px;
+                margin-right: 24px;
+            }
+        }
+    }
+    &Item {
+        margin: 0 6px;
+        &__title {
+            bottom: calc(100% + 24px);
+        }
+    }
+  }
+}
+// 1024px
+@mixin history-lg-xlg {
+  .history {
+  }
+}
+// 930px
+@mixin history-md-lg {
+  .history {
+    &Top {
+        padding: 40px 0 130px;
+    }
+    &Main {
+        padding-bottom: 90px;
+        &__slider {
+            width: calc(100% + 10px);
+            margin: 0 -5px;
+        }
+        &__footer {
+            padding-top: 25px;
+            button {
+                width: 40px;
+                height: 40px;
+                margin-right: 14px;
+            }
+        }
+    }
+    &Item {
+        margin: 0 5px;
+        &__title {
+            bottom: calc(100% + 16px);
+        }
+    }
+  }
+}
+// 750px
+@mixin history-sm-md {
+  .history {
+    &Top {
+        padding: 30px 0 100px;
+    }
+    &Item {
+        &__title {
+            bottom: calc(100% + 10px);
+        }
+        h2 {
+            font-size: 15px;
+            line-height: 20px;
+            span {
+                margin: 0;
+            }
+        }
+    }
+    &Main {
+        padding-bottom: 60px;
+        &__footer {
+            padding-top: 15px;
+        }
+    }
+  }
+}
+// 650px
+@mixin history-sm-md-extra {
+  .history {
+  }
+}
+// 540px
+@mixin history-xsm-sm {
+  .history {
+    &Top {
+        padding: 30px 0 90px;
+    }
+    &Main {
+        padding-bottom: 50px;
+        &__slider {
+            width: calc(100% + 6px);
+            margin: 0 -3px;
+        }
+        &__footer {
+            padding-top: 15px;
+            button {
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+            }
+        }
+    }
+    &Item {
+        margin: 0 3px;
+        &__title {
+            bottom: calc(100% + 10px);
+        }
+    }
+  }
+}
+// 440px
+@mixin history-xxsm-xsm {
+  .history {
+  }
+}

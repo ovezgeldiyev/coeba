@@ -1,0 +1,221 @@
+.footer {
+  padding: 40px 0;
+  background-color: #b1c639;
+  color: $white;
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &-links {
+      width: calc(30% - 35px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        font-size: 21px;
+        line-height: 100%;
+        font-weight: 300;
+        color: $white;
+        margin-right: 30px;
+        &:hover {
+          opacity: 1;
+          color: $main;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &-content {
+      width: calc(70% - 35px);
+      max-width: 1000px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &-social {
+        width: 37%;
+        max-width: 366px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+            font-size: 21px;
+            line-height: 100%;
+            font-weight: 300;
+            color: $white;
+            margin-right: 30px;
+            &:hover {
+              opacity: 1;
+              color: $main;
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+    }
+    &-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+        line-height: 24px;
+        a {
+          &:hover {
+            opacity: 1;
+            color: $main;
+          }
+        }
+    }
+    .button {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+        width: 100%;
+        margin: 0 0 24px 0;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          background-color: $white;
+          color: #b1c639;
+        }
+        &__row {
+            max-width: 220px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 15px;
+        }
+    }
+  }
+}
+// 1380px
+@mixin footer-xxxlg-xxxxlg {
+  .footer {
+    padding: 30px 0;
+    &__inner {
+      &-links {
+        width: 32%;
+        a {
+          font-size: 18px;
+          margin-right: 24px;
+        }
+      }
+      &-content {
+        width: 62%;
+      }
+      &-social {
+        flex-direction: column;
+        align-items: flex-start;
+        width: unset;
+        a {
+          font-size: 18px;
+          margin: 0 0 14px 0;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin footer-lg-xlg {
+  .footer {
+    &__inner {
+      flex-direction: column;
+      &-links {
+        width: 100%;
+        margin-bottom: 30px;
+        justify-content: flex-start;
+        a {
+          margin-right: 35px;
+        }
+      }
+      &-contact {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      &-social {
+        a {
+          font-size: 15px;
+          margin-bottom: 12px;
+        }
+      }
+      &-content {
+        align-self: flex-end;
+        width: 100%;
+      }
+      .button {
+        margin-bottom: 14px;
+        margin-right: 0;
+        &__row {
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin footer-sm-md {
+  .footer {
+    &__inner {
+      &-content {
+        width: 100%;
+      }
+    }
+  }
+}
+// 650px
+@mixin footer-sm-md-extra {
+  .footer {
+    padding: 24px 0;
+    &__inner {
+      &-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-social {
+        a {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+      }
+      &-contact {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .button {
+        font-size: 18px;
+        &__row {
+          padding: 0;
+          margin: 26px 0;
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin footer-xsm-sm {
+  .footer {
+  }
+}
+// 440px
+@mixin footer-xxsm-xsm {
+  .footer {
+    &__inner {
+      &-links {
+        width: 100%;
+        justify-content: space-between;
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+// 390px
+@mixin footer-xxxsm-xxsm {
+  .footer {
+  }
+}

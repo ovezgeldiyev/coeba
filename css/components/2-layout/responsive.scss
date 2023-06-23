@@ -1,0 +1,286 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  @include hero-xxxlg-xxxxlg;
+  @include blog-xxxlg-xxxxlg;
+  @include location-xxxlg-xxxxlg;
+  @include price-xxxlg-xxxxlg;
+  @include history-xxxlg-xxxxlg;
+  @include footer-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  h4 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  body {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1,
+  h2 {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  .main {
+    padding-top: 100px;
+  }
+  @include header-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include intro-xlg-xxlg;
+  @include blog-xlg-xxlg;
+  @include location-xlg-xxlg;
+  @include price-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include project-xlg-xxlg;
+  @include show-xlg-xxlg;
+  @include team-xlg-xxlg;
+  @include history-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .button {
+    font-size: 17px;
+    padding: 6px 10px;
+    &__row {
+      .button {
+        margin-right: 12px;
+      }
+    }
+  }
+  .video {
+    &__play {
+      span {
+        width: 50px;
+        height: 50px;
+        &::before {
+          width: 4px;
+        }
+        &::after {
+          width: 4px;
+        }
+      }
+      b {
+        font-size: 12px;
+      }
+    }
+  }
+  @include hero-lg-xlg;
+  @include intro-lg-xlg;
+  @include location-lg-xlg;
+  @include price-lg-xlg;
+  @include about-lg-xlg;
+  @include project-lg-xlg;
+  @include show-lg-xlg;
+  @include team-lg-xlg;
+  @include footer-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1,
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include hero-md-lg;
+  @include blog-md-lg;
+  @include location-md-lg;
+  @include price-md-lg;
+  @include about-md-lg;
+  @include project-md-lg;
+  @include show-md-lg;
+  @include team-md-lg;
+  @include history-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  .video {
+    &__play {
+      span {
+        width: 40px;
+        height: 40px;
+        &::before {
+          width: 3px;
+        }
+        &::after {
+          width: 3px;
+        }
+      }
+      b {
+        font-size: 11px;
+      }
+    }
+  }
+  .input {
+    input {
+      font-size: 18px;
+    }
+  }
+  .check {
+    &__box {
+      width: 28px;
+      height: 28px;
+      margin-right: 14px;
+    }
+    b {
+      width: calc(100% - 42px);
+    }
+  }
+  .custom-file-upload {
+    border: 1px dashed $white;
+    padding: 20px;
+    margin-bottom: 16px;
+    span {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  @include header-sm-md;
+  @include nav-sm-md;
+  @include hero-sm-md;
+  @include intro-sm-md;
+  @include location-sm-md;
+  @include history-sm-md;
+  @include blog-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+
+  @include hero-sm-md-extra;
+  @include project-sm-md-extra;
+  @include team-sm-md-extra;
+  @include footer-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1,
+  h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  p {
+    &.sm {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  .button {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+  .lang {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    span {
+      font-size: 16px;
+    }
+  }
+  .main {
+    padding-top: 74px;
+  }
+  .anchor {
+    top: -50px;
+  }
+  .video {
+    &__play {
+      span {
+        width: 30px;
+        height: 30px;
+        &::before {
+          width: 2.5px;
+        }
+        &::after {
+          width: 2.5px;
+        }
+      }
+      b {
+        display: none;
+      }
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include intro-xsm-sm;
+  @include blog-xsm-sm;
+  @include location-xsm-sm;
+  @include price-xsm-sm;
+  @include about-xsm-sm;
+  @include project-xsm-sm;
+  @include show-xsm-sm;
+  @include team-xsm-sm;
+  @include history-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  body {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .lang {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    span {
+      font-size: 13px;
+    }
+  }
+  @include nav-xxsm-xsm;
+  @include hero-xxsm-xsm;
+  @include price-xxsm-xsm;
+  @include footer-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}

@@ -1,0 +1,688 @@
+.hero {
+  &.rev {
+    .hero__inner {
+      padding: 40px 0;
+      &-content {
+        margin: 0 0 30px 0;
+        padding: 0;
+      }
+    }
+  }
+  &.big {
+    .hero__inner {
+      padding-bottom: 130px;
+    }
+  }
+  &.dot {
+    .hero__inner {
+      .slick {
+        &-dots {
+          display: flex !important;
+        }
+      }
+    }
+  }
+  &.unbordered {
+    .hero__inner {
+      border: unset;
+      padding: 0;
+    }
+  }
+  &__inner {
+    border-bottom: 2px dashed $main;
+    padding-bottom: 40px;
+    .slick {
+      &-track {
+        display: flex !important;
+        align-items: stretch;
+      }
+      &-slide {
+        height: unset;
+      }
+      &-dots {
+        position: absolute;
+        bottom: 25px;
+        right: 40px;
+        display: none !important;
+        align-items: center;
+        justify-content: flex-end;
+        width: calc(100% - 80px);
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 35px;
+          background-color: $white;
+          transition: .3s ease;
+          cursor: pointer;
+          border: 1px solid $main;
+          color: $main;
+          position: relative;
+          margin: 0 10px 0 0;
+          &:last-child {
+            margin: 0;
+          }
+          &.slick-active {
+            background-color: $main;
+            a {
+              color: $white;
+            }
+          }
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: $main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+    &-content {
+      margin-top: 30px;
+      position: relative;
+      & > p {
+        margin-bottom: 12px;
+      }
+    }
+    &-info {
+      padding-top: 34px;
+      width: 50%;
+      max-width: 880px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      p {
+        width: 50%;
+        margin: 0;
+        font-weight: 350;
+      }
+    }
+    &-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      line-height: 20px;
+      color: $primary;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      b {
+        font-weight: 350;
+      }
+      &:hover {
+        color: $main;
+        span {
+          background-color: $main;
+        }
+      }
+      span {
+        width: 68px;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    h1,
+    h2 {
+      margin-bottom: 16px;
+      width: 45%;
+      max-width: 700px;
+      span {
+        display: inline-block;
+        width: 21px;
+        height: 9px;
+        margin: 0 22px 7px 0;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 9px;
+          height: 9px;
+          content: "";
+          background-color: $primary;
+          border-radius: 50%;
+        }
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 9px;
+          height: 9px;
+          content: "";
+          background-color: $primary;
+          border-radius: 50%;
+        }
+        &:last-child {
+          margin: 0px 0 0 24px;
+        }
+      }
+      b {
+        display: block;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+    }
+    h2 {
+      width: unset;
+      max-width: unset;
+    }
+  }
+  &Item {
+    min-height: calc(100vh - 250px) !important;
+    &.base {
+      min-height: unset !important;
+      .heroItem__inner {
+        padding-bottom: 50%;
+      }
+    }
+    &__inner {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1380px
+@mixin hero-xxxlg-xxxxlg {
+  .hero {
+    &.big {
+      .hero__inner {
+        padding-bottom: 100px;
+      }
+    }
+    &__inner {
+      &-content {
+        margin-top: 20px;
+      }
+      &-arrow {
+        font-size: 12px;
+        line-height: 15px;
+        span {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &-info {
+        width: 100%;
+      }
+      h1{
+        width: 46%;
+      }
+    }
+    &Item {
+      min-height: calc(100vh - 218px) !important;
+    }
+  }
+}
+// 1250px
+@mixin hero-xlg-xxlg-extra {
+  .hero {
+  }
+}
+// 1180px
+@mixin hero-xlg-xxlg {
+  .hero {
+    &.big {
+      .hero__inner {
+        padding-bottom: 80px;
+      }
+    }
+    &__inner {
+      &-arrow {
+        font-size: 11px;
+        line-height: 14px;
+        span {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    &Item {
+      min-height: calc(100vh - 190px) !important;
+    }
+  }
+}
+// 1024px
+@mixin hero-lg-xlg {
+  .hero {
+  }
+}
+// 930px
+@mixin hero-md-lg {
+  .hero {
+    &.big {
+      .hero__inner {
+        padding-bottom: 50px;
+      }
+    }
+    &.rev {
+      .hero__inner {
+        padding: 30px 0;
+      }
+    }
+    &__inner {
+      padding-bottom: 30px;
+      .slick {
+        &-dots {
+          right: 30px;
+          width: calc(100% - 60px);
+        }
+      }
+      &-info {
+        width: 100%;
+        max-width: unset;
+        padding-top: 0;
+        p {
+          width: calc(60% - 10px);
+          &:last-child {
+            width: calc(40% - 10px);
+          }
+        }
+      }
+      &-arrow {
+        font-size: 11px;
+        line-height: 14px;
+        span {
+          width: 35px;
+          height: 35px;
+        }
+        b {
+          display: none;
+        }
+      }
+      &-content {
+        margin-top: 12px;
+        padding-top: 50px;
+      }
+      h1 {
+        width: 100%;
+        max-width: unset;
+        span {
+          margin: 0 15px 3px 0;
+          width: 18px;
+          &::before {
+            width: 7px;
+            height: 7px;
+          }
+          &:after {
+            width: 7px;
+            height: 7px;
+          }
+          &:last-child {
+            margin: 0 0 0 15px;
+          }
+        }
+      }
+      h1, h2 {
+        margin-bottom: 12px;
+      }
+    }
+    &Item {
+      min-height: calc(100vh - 160px) !important;
+    }
+  }
+}
+// 750px
+@mixin hero-sm-md {
+  .hero {
+  }
+}
+// 650px
+@mixin hero-sm-md-extra {
+  .hero {
+  }
+}
+// 540px
+@mixin hero-xsm-sm {
+  .hero {
+    &.big {
+      .hero__inner {
+        padding-bottom: 20px;
+      }
+    }
+    &.rev {
+      .hero__inner {
+        padding: 20px 0;
+      }
+    }
+    &__inner {
+      border-width: 1px;
+      .slick {
+        &-dots {
+          bottom: 15px;
+          right: 15px;
+          width: calc(100% - 30px);
+          li {
+            width: 25px;
+            height: 25px;
+            margin-right: 6px;
+          }
+        }
+      }
+      &-info {
+        flex-direction: column;
+        p {
+          width: 100%;
+          margin-bottom: 15px;
+          &:last-child {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+    }
+    &Item {
+      min-height: calc(100vh - 130px) !important;
+    }
+  }
+}
+// 440px
+@mixin hero-xxsm-xsm {
+  .hero {
+  }
+}
+.intro {
+  &.last {
+    .intro__inner {
+      border: unset;
+      padding-bottom: 180px;
+    }
+  }
+  &__inner {
+    border-bottom: 2px dashed $main;
+    padding: 40px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &-content {
+      width: calc(50% - 15px);
+      &.sm {
+        width: calc(23% - 15px);
+      }
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding-bottom: 62%;
+      &.med {
+        padding-bottom: 71%;
+      }
+      &.sm {
+        padding-bottom: 128%;
+      }
+      &.ex {
+        padding-bottom: 150%;
+      }
+      &-wrapper {
+        width: calc(50% - 15px);
+        margin-right: 24px;
+        &:last-child {
+          margin: 0;
+        }
+        &.big {
+          width: calc(75% - 24px);
+        }
+        &.med {
+          width: 66%;
+        }
+        &.sm {
+          width: 35%;
+        }
+        &.ex {
+          width: calc(34% - 24px);
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-row {
+      width: calc(77% - 15px);
+      max-width: 1290px;
+      display: flex;
+      &.med {
+        width: calc(50% - 15px);
+      }
+    }
+    .button {
+      &__row {
+        flex-wrap: wrap;
+        margin-bottom: -16px;
+        .button {
+          margin: 0 24px 16px 0;
+        }
+      }
+    }
+    p {
+      margin-bottom: 13px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
+// 1380px
+@mixin intro-xxxlg-xxxxlg {
+  .intro {
+  }
+}
+// 1250px
+@mixin intro-xlg-xxlg-extra {
+  .intro {
+  }
+}
+// 1180px
+@mixin intro-xlg-xxlg {
+  .intro {
+    &.last {
+      .intro__inner {
+        padding-bottom: 150px;
+      }
+    }
+    &__inner {
+      padding: 30px 0;
+      &-content {
+        width: calc(50% - 10px);
+        &.sm {
+          width: calc(25% - 10px);
+        }
+      }
+      &-row {
+        width: calc(75% - 10px);
+      }
+      &-image {
+        &-wrapper {
+          width: calc(50% - 10px);
+          margin-right: 14px;
+          &.ex {
+            width: calc(34% - 14px);
+          }
+        }
+      }
+      .button {
+        &__row {
+          .button {
+            margin-right: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin intro-lg-xlg {
+  .intro {
+    &.last {
+      .intro__inner {
+        padding-bottom: 120px;
+      }
+    }
+    &__inner {
+      &-content {
+        &.sm {
+          width: calc(50% - 10px);
+        }
+      }
+      &-row {
+        width: calc(50% - 10px);
+      }
+      &-image {
+        &-wrapper {
+          &.sm {
+            display: none;
+          }
+          &.big {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin intro-md-lg {
+  .intro {
+  }
+}
+// 750px
+@mixin intro-sm-md {
+  .intro {
+    &.last {
+      .intro__inner {
+        padding-bottom: 90px;
+      }
+    }
+    &__inner {
+      padding: 24px 0;
+      flex-direction: column;
+      &-content {
+        width: 100%;
+        max-width: unset;
+        margin-top: 24px;
+        &.sm {
+          width: 100%;
+        }
+      }
+      &-row {
+        width: 100%;
+        order: -1;
+        &.med {
+          width: 100%;
+        }
+      }
+      &-image {
+        &.mob {
+          padding-bottom: 62%;
+        }
+        &-wrapper {
+          order: -1;
+          width: 100%;
+          max-width: unset;
+          &.hidden {
+            display: none;
+          }
+          &.sm {
+            display: block;
+          }
+          &.mob {
+           width: 100%;
+          }
+          &.big {
+            width: calc(75% - 14px);
+          margin-right: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// 650px
+@mixin intro-sm-md-extra {
+  .intro {
+  }
+}
+// 540px
+@mixin intro-xsm-sm {
+  .intro {
+    &.last {
+      .intro__inner {
+        padding-bottom: 40px;
+      }
+    }
+    &__inner {
+      padding: 20px 0;
+      border-width: 1px;
+      &-image {
+        &.med {
+          padding-bottom: 62%;
+        }
+        &-wrapper {
+          &.big {
+            width: 100%;
+            margin: 0;
+          }
+          &.med {
+            width: 100%;
+          }
+          &.sm {
+            display: none;
+          }
+          &.ex {
+            display: none;
+          }
+        }
+      }
+      &-content {
+        margin-top: 14px;
+      }
+      h2 {
+        margin-bottom: 14px;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+      .button {
+        &__row {
+          margin-bottom: -10px;
+          .button {
+            margin: 0 10px 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin intro-xxsm-xsm {
+  .intro {
+  }
+}

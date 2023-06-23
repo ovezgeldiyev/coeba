@@ -1,0 +1,248 @@
+.about {
+  &.sm {
+    .about {
+      &__inner {
+        border: unset;
+        padding: 35px 0 0;
+        &::before {
+          display: none;
+        }
+      }
+      &Item {
+        margin-bottom: 128px;
+        &__image {
+          margin-bottom: 20px;
+        }
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__inner {
+    padding: 65px 0 24px;
+    border-bottom: 2px dashed $main;
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      pointer-events: none;
+      content: "";
+      transform: translate(-50%, 50%);
+    }
+    &-title {
+      margin-bottom: 100px;
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+    &-categories {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .button {
+        margin: 0 24px 14px 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-row {
+      margin: 0 -12px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &Item {
+    width: calc(50% - 24px);
+    margin: 12px 12px 30px;
+    &__image {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    h2 {
+      margin-bottom: 24px;
+      span {
+        display: block;
+        font-weight: 400;
+        margin-top: 4px;
+        text-transform: capitalize;
+      }
+    }
+    p {
+      max-width: 710px;
+      min-height: 300px;
+      &.sm {
+        margin-bottom: 8px;
+        min-height: unset;
+      }
+    }
+  }
+}
+// 1380px
+@mixin about-xxxlg-xxxxlg {
+  .about {
+  }
+}
+// 1250px
+@mixin about-xlg-xxlg-extra {
+  .about {
+  }
+}
+// 1180px
+@mixin about-xlg-xxlg {
+  .about {
+    &.sm {
+      .aboutItem {
+        margin-bottom: 80px;
+      }
+    }
+    &__inner {
+      padding: 40px 0 20px;
+      &-categories {
+        .button {
+          margin-right: 12px;
+        }
+      }
+      &-title {
+        margin-bottom: 70px;
+        h2 {
+          margin-bottom: 20px;
+        }
+      }
+        &-row {
+            margin: 0 -8px;
+        }
+    }
+    &Item {
+      width: calc(50% - 16px);
+        margin: 8px 8px 20px;
+        &__image {
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 16px;
+        }
+        p {
+          min-height: 260px;
+        }
+    }
+  }
+}
+// 1024px
+@mixin about-lg-xlg {
+  .about {
+    &__inner {
+      &-title {
+        margin-bottom: 60px;
+      }
+    }
+    &.sm {
+      .aboutItem {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+// 930px
+@mixin about-md-lg {
+  .about {
+    &.sm {
+      .aboutItem {
+        margin-bottom: 40px;
+      }
+    }
+    &__inner {
+      padding: 0 0 30px;
+      &-title {
+        margin-bottom: 30px;
+      }
+      &::before {
+        display: none;
+      }
+      &-row {
+        margin: 0;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 30px 0;
+      &:last-child {
+        margin: 0;
+      }
+      p {
+        min-height: unset;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+// 750px
+@mixin about-sm-md {
+  .about {
+ 
+  }
+}
+// 650px
+@mixin about-sm-md-extra {
+  .about {
+  }
+}
+// 540px
+@mixin about-xsm-sm {
+  .about {
+    &.sm {
+      .about{
+        &__inner {
+          padding: 20px 0;
+        }
+        &Item {
+          margin-bottom: 24px;
+          &__image {
+            margin-bottom: 15px;
+          }
+        }
+   
+      }
+    }
+    &__inner {
+      &-title {
+        margin-bottom: 15px;
+      }
+      &-categories{
+        .button {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &Item {
+ 
+      h2 {
+        span {
+          margin: 0;
+        }
+      }
+      p {
+        &.sm {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin about-xxsm-xsm {
+  .about {
+  }
+}
